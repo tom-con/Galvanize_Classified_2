@@ -8,7 +8,7 @@ This is a simple Angular front end for your Galvanize Classified API.  **Part 3 
 
 ### Getting Started
 
-Copy your files from **Part 1** into your project directory.  This is important: make sure you don't edit the part 1 files so we can evaluate each part independently.   This also allows you to redo pieces of this assessment individually.
+Copy your files from **Part 1** into the **server** project directory.  Adjust your server/app.js file to serve up your angular files in the client directory.  You may use a CDN or node_modules for your angular script. This is important: make sure you don't edit the part 1 files so we can evaluate each part independently.   This also allows you to redo pieces of this assessment individually.
 
 ### Requirements
 
