@@ -8,7 +8,6 @@ const knex = require('../knex.js')
 // YOUR CODE HERE
 router.get('/', function(req, res, next) {
   knex('classifieds')
-    .select('id', 'title', 'description', 'price', 'item_image')
     .then(classifieds => {
       res.status(200).send(classifieds)
     })

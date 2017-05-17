@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const logger = require('morgan');
+const path = require('path');
 const bodyParser = require('body-parser');
 const messages = require('./routes/classifieds');
 
