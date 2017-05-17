@@ -4,12 +4,21 @@ const express = require('express');
 const app = express();
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const messages = require('./routes/classifieds');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 
-const messages = require('./routes/classifieds');
+
+app.use(express.static(path.join(__dirname, '/../client')))
+app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
+
 app.use('/classifieds',messages);
+app.use('*', function(req, res) {
+  res.sendFile('index.html', {
+    root: path.join(__dirname, '/../client')
+  })
+})
 
 const port = process.env.PORT || 3000;
 
